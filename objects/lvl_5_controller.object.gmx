@@ -26,12 +26,15 @@
           <argument>
             <kind>1</kind>
             <string>/* DEETS 
-    -110 rows
-    -65% obj_dirt
-    -35% non
+-----------------------
+-110 rows
+-65% obj_dirt
+-25 enemies
+-35% non
     &gt;35% coins
     &gt;30% bombs
     &gt;35% empty space
+-----------------------
 */
 
 //Initialize variables

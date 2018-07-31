@@ -53,13 +53,13 @@
     <object>objects\obj_lava</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_test</room>
+    <room>rooms\rm_lvl4</room>
     <room>rooms\rm_star</room>
     <room>rooms\rm_lvl1</room>
     <room>rooms\rm_lvl2</room>
     <room>rooms\rm_lvl3</room>
-    <room>rooms\rm_lvl4</room>
     <room>rooms\rm_lvl5</room>
+    <room>rooms\rm_test</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
