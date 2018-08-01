@@ -51,10 +51,20 @@ show_message("Level 1- 300 metres");
 // Generate rows
 for (var i = 0; i &lt; numRows; i++)
 {
+    unbreakable = false;
     for (var n = 0; n &lt; 8; n++)
     {
         if (choose(1, 1, 1, 0))
-            instance_create(200+(blockWidth/2)+(n*blockWidth), -(blockWidth/2)-i*blockWidth+300, obj_dirt);
+        {
+            if (i % 5 == 0 and !unbreakable)
+            {
+                instance_create(200+(blockWidth/2)+(n*blockWidth), -(blockWidth/2)-i*blockWidth+300, obj_unbreakable_dirt);
+                unbreakable = true;
+                
+            }
+            else
+                instance_create(200+(blockWidth/2)+(n*blockWidth), -(blockWidth/2)-i*blockWidth+300, obj_dirt);
+        }
         else
         {
             if (choose(1, 1, 1, 0))

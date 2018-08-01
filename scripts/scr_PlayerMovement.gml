@@ -16,7 +16,7 @@ if (place_free(x, y+1))
 else
     grav = 0;
 
-if (place_meeting(x, y+vspd, obj_dirt))
+if (place_meeting(x, y+vspd, obj_dirt) or place_meeting(x, y+vspd, obj_unbreakable_dirt))
 {
     // downward movement
     if (sign(vspd) == 1)
@@ -36,6 +36,12 @@ if keyboard_check_pressed(vk_space) and (!place_free(x, y+1) and place_free(x, y
 
 // Collision
 if (place_meeting(x+hspd, y, obj_dirt))
+{
+    hspd = 0;
+}
+
+// with obj_unbreakable_dirt
+if (place_meeting(x+hspd, y, obj_unbreakable_dirt))
 {
     hspd = 0;
 }

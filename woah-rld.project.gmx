@@ -52,6 +52,7 @@
     <object>objects\obj_btn_start</object>
     <object>objects\obj_win</object>
     <object>objects\obj_lava</object>
+    <object>objects\obj_unbreakable_dirt</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_start</room>
