@@ -49,7 +49,7 @@ hspd = random_range(2, 4);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>y += blockSpeed;
+            <string>scr_EnemyMovement();
 
 // Out of room
 if (place_meeting(x, y-sprite_width-10, obj_lava))

@@ -40,8 +40,8 @@
 randomize();
 
 //Initialize variables
-numRows = 10;
-numEnemies = 2;
+numRows = 90;
+numEnemies = 5;
 blockWidth = 80;
 
 globalvar blockSpeed;
