@@ -32,7 +32,7 @@ hspd = random_range(2, 4);
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event eventtype="3" enumb="2">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -49,8 +49,13 @@ hspd = random_range(2, 4);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// movement
-scr_EnemyMovement();
+            <string>y += blockSpeed;
+
+// Out of room
+if (place_meeting(x, y-sprite_width-10, obj_lava))
+{
+    instance_destroy();
+}
 </string>
           </argument>
         </arguments>

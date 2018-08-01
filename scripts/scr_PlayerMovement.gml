@@ -36,7 +36,9 @@ if keyboard_check_pressed(vk_space) and (!place_free(x, y+1) and place_free(x, y
 
 // Collision
 if (place_meeting(x+hspd, y, obj_dirt))
+{
     hspd = 0;
+}
     
 // with obj_platform
 if (place_meeting(x, y+vspd, obj_platform))

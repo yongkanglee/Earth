@@ -28,7 +28,7 @@
             <string>/// Initialize variables
 
 grav = 1;
-movespeed = 7;
+movespeed = 8;
 jumpspeed = 18;
 
 hspd = 0;

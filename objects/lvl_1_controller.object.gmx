@@ -120,7 +120,8 @@ if (file_exists("Save.sav"))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_AddDirt();
+            <string>/// Add Dirt
+scr_AddDirt();
 </string>
           </argument>
         </arguments>

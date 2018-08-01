@@ -3,7 +3,7 @@
   <spriteName>spr_lava</spriteName>
   <solid>-1</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-1000</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>vspd = 0;
+
+initialBlockSpeed = blockSpeed;
 </string>
           </argument>
         </arguments>
@@ -49,7 +51,7 @@
           <argument>
             <kind>1</kind>
             <string>if (obj_player.vspd &lt; 0)
-    vspd = blockSpeed*0.2;
+    vspd = initialBlockSpeed*0.2;
 else if (obj_player.vspd == 0)
     vspd *= 1.01;
     

@@ -50,7 +50,7 @@
             <string>y += blockSpeed;
 
 // Out of room
-if (y &gt; room_height-sprite_height/2)
+if (place_meeting(x, y-sprite_width-10, obj_lava))
 {
     instance_destroy();
 }
