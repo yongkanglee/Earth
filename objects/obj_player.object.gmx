@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>/// Initialize variables
 
-grav = 1;
+grav = 0.5;
 movespeed = 8;
 jumpspeed = 18;
 

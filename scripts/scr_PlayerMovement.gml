@@ -6,7 +6,7 @@ key_right = keyboard_check(ord("D"));
 hspd = (key_left+key_right) * movespeed;
 
 // Jump
-if (grav < 10)
+if (vspd < 25)
 {
     vspd += grav;
 }
