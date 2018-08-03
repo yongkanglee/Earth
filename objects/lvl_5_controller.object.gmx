@@ -72,6 +72,29 @@ for (var i=0; i&lt; numRows; i++)
         </arguments>
       </action>
     </event>
+    <event eventtype="5" enumb="87">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>blockSpeed *= 1.01;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="6" enumb="54">
       <action>
         <libid>1</libid>
@@ -91,6 +114,29 @@ for (var i=0; i&lt; numRows; i++)
             <kind>1</kind>
             <string>/// Add Dirt
 scr_AddDirt();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="10" enumb="87">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>blockSpeed = 1.4;
 </string>
           </argument>
         </arguments>

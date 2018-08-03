@@ -17,9 +17,10 @@
     <sprite>sprites\spr_win</sprite>
     <sprite>sprites\spr_lava</sprite>
     <sprite>sprites\spr_superpower_dirt</sprite>
+    <sprite>sprites\spr_accelerate</sprite>
   </sprites>
   <backgrounds name="background">
-    <background>background\rm_bg</background>
+    <background>background\bg_rm</background>
     <background>background\bg_start</background>
   </backgrounds>
   <paths name="paths"/>
