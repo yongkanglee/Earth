@@ -26,42 +26,137 @@
           <argument>
             <kind>1</kind>
             <string>/* DEETS 
-    -90 rows
-    -70% obj_dirt
-    -30% non
+-----------------------
+-90 rows
+-5 enemies
+-70% obj_dirt
+-30% non
     &gt;50% coins
-    &gt;25% bombs
-    &gt;25% empty space
-    &gt;5 enemy
+    &gt;20% bombs
+    &gt;30% empty space
+-----------------------
 */
 
+randomize();
+
 //Initialize variables
-numRows = 90
+numRows = 90;
+numEnemies = 5;
 blockWidth = 80;
+
+globalvar blockSpeed;
+blockSpeed = 1.2;
+
+globalvar blocksBroken;
+blocksBroken = 0;
+
+// Message
+show_message("Level 4- 900 metres");
+
+// Generate row numbers for enemies
+enemies = ds_map_create();
+while (ds_map_size(enemies) &lt; numEnemies)
+{
+    r = irandom(numRows);
+    if (is_undefined(ds_map_find_value(enemies, r)))
+        ds_map_add(enemies, r, r);
+}
 
 //Generate rows
 for (var i=0; i&lt; numRows; i++)
 {
-    for (var n=0; n &lt; 8; n++)
+    if (ds_map_find_value(enemies, i))
     {
-        if (choose(1,0,0,0))
-            instance_create(200+(blockWidth/2)+(n*blockWidth), -(blockWidth/2)-i*blockWidth, obj_dirt);
-        if (numRows=2)
-            instance_create(200+(blockWidth/2)+(n*blockWidth), -(blockWidth/2)-i*blockWidth, obj_enemy);
-        else
+        instance_create(irandom_range(200+blockWidth/2, 840-blockWidth/2), -(blockWidth/2)-i*blockWidth+300, obj_enemy);
+    }
+    else
+    {
+        for (var n=0; n &lt; 8; n++)
         {
-            if (choose(1,0))
-            instance_create(200+(blockWidth/2)+(n*blockWidth), -(blockWidth/2)-i*blockWidth, obj_coin);
-            
-            else if (choose(1,0,0,0))
+            if (random(100) &lt;= 70)
+                instance_create(200+(blockWidth/2)+(n*blockWidth), -(blockWidth/2)-i*blockWidth+300, obj_dirt);
+            else
             {
-                instance_create(200+(blockWidth/2)+(n*blockWidth), -(blockWidth/2)-i*blockWidth, obj_bomb);
-                
-            }
-            
-        }    
+                if (choose(1,0))
+                    instance_create(200+(blockWidth/2)+(n*blockWidth), -(blockWidth/2)-i*blockWidth+300, obj_coin);
+                else if (choose(1,0,0,0))
+                {
+                    instance_create(200+(blockWidth/2)+(n*blockWidth), -(blockWidth/2)-i*blockWidth+300, obj_bomb);
+                }
+            }  
+        }
     }
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="5" enumb="87">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>blockSpeed *= 1.01;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="54">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Add Dirt
+scr_AddDirt();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="10" enumb="87">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>blockSpeed = 1.2;
 </string>
           </argument>
         </arguments>
